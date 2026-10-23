@@ -24,27 +24,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* Default: Pastel Pink & Clean White Theme */
+    /* 1. Default: Pastel Pink */
     :root, [data-theme="pastel"], [data-theme="light"] {
-      --bg-body: #fff0f5;         /* LavenderBlush / Softest Pastel Pink */
+      --bg-body: #fff0f5;         /* LavenderBlush */
       --bg-card: #ffffff;         /* Pure crisp white */
       --bg-card-hover: #fff5f8;   /* Petal blush */
-      --bg-input: #ffffff;        /* Pure crisp white */
-      --border-color: #fce7f3;    /* Delicate pastel pink border */
-      --border-subtle: #fdf2f8;   /* Softest pink border */
-      --text-main: #4a1d35;       /* Deep plum rose for high contrast */
-      --text-muted: #9d6b84;      /* Soft mauve rose text */
-      --text-subtle: #be8fa7;     /* Soft blush text */
-      --primary: #f472b6;         /* Pastel rose pink */
-      --primary-hover: #ec4899;   /* Vibrant petal pink */
+      --bg-input: #ffffff;
+      --border-color: #fce7f3;
+      --border-subtle: #fdf2f8;
+      --text-main: #4a1d35;
+      --text-muted: #9d6b84;
+      --text-subtle: #be8fa7;
+      --primary: #f472b6;
+      --primary-hover: #ec4899;
       --primary-light: rgba(244, 114, 182, 0.18);
-      --income: #059669;          /* Fresh emerald mint */
+      --income: #059669;
       --income-light: rgba(5, 150, 105, 0.12);
-      --expense: #fb7185;         /* Pastel rose coral */
+      --expense: #fb7185;
       --expense-light: rgba(251, 113, 133, 0.15);
-      --warning: #f59e0b;         /* Warm honey amber */
+      --warning: #f59e0b;
       --warning-light: rgba(245, 158, 11, 0.12);
-      --info: #f472b6;            /* Pastel pink */
+      --info: #f472b6;
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 18px;
@@ -55,6 +55,7 @@
       --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    /* 2. Dark Velvet */
     [data-theme="dark"] {
       --bg-body: #1c1219;
       --bg-card: #271923;
@@ -82,6 +83,130 @@
       --shadow-sm: 0 2px 6px rgba(0,0,0,0.3);
       --shadow-md: 0 6px 16px rgba(0,0,0,0.35);
       --shadow-lg: 0 12px 28px -6px rgba(0,0,0,0.45);
+      --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* 3. Hitam Putih / Monochrome Dark */
+    [data-theme="monochrome"] {
+      --bg-body: #121212;
+      --bg-card: #1e1e1e;
+      --bg-card-hover: #262626;
+      --bg-input: #1a1a1a;
+      --border-color: #383838;
+      --border-subtle: #2b2b2b;
+      --text-main: #ffffff;
+      --text-muted: #a3a3a3;
+      --text-subtle: #737373;
+      --primary: #ffffff;
+      --primary-hover: #e5e5e5;
+      --primary-light: rgba(255, 255, 255, 0.15);
+      --income: #4ade80;
+      --income-light: rgba(74, 222, 128, 0.15);
+      --expense: #f87171;
+      --expense-light: rgba(248, 113, 113, 0.15);
+      --warning: #facc15;
+      --warning-light: rgba(250, 204, 21, 0.15);
+      --info: #ffffff;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 18px;
+      --radius-xl: 22px;
+      --shadow-sm: 0 2px 6px rgba(0,0,0,0.4);
+      --shadow-md: 0 6px 16px rgba(0,0,0,0.5);
+      --shadow-lg: 0 12px 28px -6px rgba(0,0,0,0.6);
+      --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* 4. Minimalist Clean White / Monochrome Light */
+    [data-theme="minimal-light"] {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --bg-input: #ffffff;
+      --border-color: #e2e8f0;
+      --border-subtle: #edf2f7;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-subtle: #94a3b8;
+      --primary: #1e293b;
+      --primary-hover: #0f172a;
+      --primary-light: rgba(30, 41, 59, 0.12);
+      --income: #16a34a;
+      --income-light: rgba(22, 163, 74, 0.12);
+      --expense: #dc2626;
+      --expense-light: rgba(220, 38, 38, 0.12);
+      --warning: #d97706;
+      --warning-light: rgba(217, 119, 6, 0.12);
+      --info: #0284c7;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 18px;
+      --radius-xl: 22px;
+      --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 6px 16px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.12);
+      --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* 5. Emerald Green / Mint */
+    [data-theme="emerald"] {
+      --bg-body: #f0fdf4;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f7fee7;
+      --bg-input: #ffffff;
+      --border-color: #dcfce7;
+      --border-subtle: #eefbf1;
+      --text-main: #064e3b;
+      --text-muted: #047857;
+      --text-subtle: #6ee7b7;
+      --primary: #059669;
+      --primary-hover: #047857;
+      --primary-light: rgba(5, 150, 105, 0.16);
+      --income: #10b981;
+      --income-light: rgba(16, 185, 129, 0.15);
+      --expense: #e11d48;
+      --expense-light: rgba(225, 29, 72, 0.14);
+      --warning: #d97706;
+      --warning-light: rgba(217, 119, 6, 0.14);
+      --info: #0284c7;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 18px;
+      --radius-xl: 22px;
+      --shadow-sm: 0 2px 6px rgba(5, 150, 105, 0.08);
+      --shadow-md: 0 6px 18px rgba(5, 150, 105, 0.12);
+      --shadow-lg: 0 12px 28px -6px rgba(5, 150, 105, 0.18);
+      --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* 6. Ocean Blue / Navy */
+    [data-theme="ocean"] {
+      --bg-body: #f0f7ff;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fbff;
+      --bg-input: #ffffff;
+      --border-color: #dbeafe;
+      --border-subtle: #eff6ff;
+      --text-main: #0f172a;
+      --text-muted: #1e40af;
+      --text-subtle: #60a5fa;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-light: rgba(37, 99, 235, 0.15);
+      --income: #059669;
+      --income-light: rgba(5, 150, 105, 0.15);
+      --expense: #e11d48;
+      --expense-light: rgba(225, 29, 72, 0.15);
+      --warning: #f59e0b;
+      --warning-light: rgba(245, 158, 11, 0.15);
+      --info: #0284c7;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 18px;
+      --radius-xl: 22px;
+      --shadow-sm: 0 2px 6px rgba(37, 99, 235, 0.08);
+      --shadow-md: 0 6px 18px rgba(37, 99, 235, 0.12);
+      --shadow-lg: 0 12px 28px -6px rgba(37, 99, 235, 0.18);
       --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -136,13 +261,19 @@
     .brand-logo {
       width: 44px;
       height: 44px;
-      background: linear-gradient(135deg, #f472b6, #fb7185);
+      background: var(--primary);
       border-radius: var(--radius-md);
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
-      box-shadow: 0 4px 14px rgba(244, 114, 182, 0.4);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+
+    [data-theme="monochrome"] .brand-logo {
+      background: #ffffff;
+      color: #121212;
     }
 
     .brand-logo svg {
@@ -169,6 +300,71 @@
       flex-wrap: wrap;
     }
 
+    /* Theme Picker Dropdown & Mascot Switch */
+    .header-control-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+    }
+
+    .theme-select {
+      background: transparent;
+      border: none;
+      color: var(--text-main);
+      font-size: 0.825rem;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .theme-select option {
+      background: var(--bg-card);
+      color: var(--text-main);
+    }
+
+    /* Toggle Switch Button for Cat Mascot */
+    .mascot-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-input);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 5px 11px;
+      font-size: 0.775rem;
+      font-weight: 700;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: var(--transition);
+      user-select: none;
+    }
+
+    .mascot-toggle-btn:hover {
+      border-color: var(--primary);
+    }
+
+    .mascot-toggle-btn.active {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .mascot-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #94a3b8;
+    }
+
+    .mascot-toggle-btn.active .mascot-indicator {
+      background: #10b981;
+      box-shadow: 0 0 6px rgba(16, 185, 129, 0.7);
+    }
+
     /* Controls & Buttons */
     .btn {
       display: inline-flex;
@@ -191,12 +387,16 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #f472b6, #ec4899);
+      background: var(--primary);
       color: #ffffff;
-      box-shadow: 0 4px 14px rgba(244, 114, 182, 0.35);
+      box-shadow: var(--shadow-sm);
+    }
+    [data-theme="monochrome"] .btn-primary {
+      background: #ffffff;
+      color: #121212;
     }
     .btn-primary:hover {
-      background: linear-gradient(135deg, #ec4899, #db2777);
+      background: var(--primary-hover);
       transform: translateY(-1px);
     }
 
@@ -267,7 +467,11 @@
       background: var(--primary);
       color: #ffffff;
       border-color: var(--primary);
-      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+      box-shadow: var(--shadow-sm);
+    }
+    [data-theme="monochrome"] .chip.active {
+      background: #ffffff;
+      color: #121212;
     }
 
     .quick-status-text {
@@ -302,7 +506,7 @@
     .stat-card:hover {
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
-      border-color: rgba(99, 102, 241, 0.4);
+      border-color: var(--primary);
     }
 
     .stat-header {
@@ -401,6 +605,8 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 18px;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
     .panel-title {
@@ -432,7 +638,12 @@
       margin-bottom: 8px;
       overflow: visible;
       pointer-events: none;
-      border-bottom: 2px dashed rgba(244, 114, 182, 0.35);
+      border-bottom: 2px dashed var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .chart-cat-stage.hidden-mascot {
+      display: none !important;
     }
 
     .pixel-cat-walker {
@@ -447,7 +658,6 @@
       user-select: none;
       animation: catPatrol 18s ease-in-out infinite;
       z-index: 10;
-      /* Pastikan teks speech bubble tidak pernah terbalik/miror */
       transform: none !important;
     }
 
@@ -476,7 +686,7 @@
       animation: catBob 1.6s ease-in-out infinite;
       transform-origin: center bottom;
       transition: transform 0.2s ease;
-      filter: drop-shadow(0 4px 10px rgba(244, 114, 182, 0.45));
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
     }
 
     .pixel-cat-walker:hover .pixel-cat-avatar {
@@ -529,36 +739,18 @@
       100% { transform: translateY(0) scale(1); }
     }
 
-    /* Pergerakan Horizontal (Hanya Posisi 'Left', Tidak Membalik Wadah Teks) */
     @keyframes catPatrol {
-      0% {
-        left: 5%;
-      }
-      48% {
-        left: calc(90% - 60px);
-      }
-      50% {
-        left: calc(90% - 60px);
-      }
-      98% {
-        left: 5%;
-      }
-      100% {
-        left: 5%;
-      }
+      0% { left: 5%; }
+      48% { left: calc(90% - 60px); }
+      50% { left: calc(90% - 60px); }
+      98% { left: 5%; }
+      100% { left: 5%; }
     }
 
-    /* Pembalikan Arah Kucing (Hanya Membalik Kepala Kucing, Teks Tetap Normal) */
     @keyframes catFlip {
-      0%, 48% {
-        transform: scaleX(1);
-      }
-      50%, 98% {
-        transform: scaleX(-1);
-      }
-      100% {
-        transform: scaleX(1);
-      }
+      0%, 48% { transform: scaleX(1); }
+      50%, 98% { transform: scaleX(-1); }
+      100% { transform: scaleX(1); }
     }
 
     @keyframes earTwitchLeft {
@@ -578,17 +770,17 @@
       94% { transform: scaleY(0.08); }
     }
 
-    /* Speech Bubble (Bebas dari Mirroring) */
+    /* Speech Bubble */
     .cat-speech-bubble {
-      background: #ffffff;
-      border: 1.5px solid #f472b6;
+      background: var(--bg-card);
+      border: 1.5px solid var(--primary);
       border-radius: 12px;
       padding: 3px 10px;
       font-size: 0.72rem;
       font-weight: 700;
-      color: #831843;
+      color: var(--text-main);
       white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(244, 114, 182, 0.25);
+      box-shadow: var(--shadow-sm);
       position: relative;
       margin-bottom: 4px;
       display: inline-flex;
@@ -616,7 +808,7 @@
       height: 0;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-top: 6px solid #f472b6;
+      border-top: 6px solid var(--primary);
     }
 
     @keyframes bubbleFloat {
@@ -630,22 +822,21 @@
       align-items: center;
       gap: 6px;
       padding: 4px 10px;
-      background: #fff0f5;
-      border: 1px solid #fce7f3;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
       border-radius: 20px;
       font-size: 0.75rem;
       font-weight: 700;
-      color: #db2777;
+      color: var(--primary);
       cursor: pointer;
-      box-shadow: 0 2px 6px rgba(244, 114, 182, 0.15);
+      box-shadow: var(--shadow-sm);
       transition: all 0.2s ease;
     }
 
     .chart-cat-badge:hover {
-      background: #fdf2f8;
-      border-color: #f472b6;
+      background: var(--bg-card-hover);
+      border-color: var(--primary);
       transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(244, 114, 182, 0.25);
     }
 
     /* Floating Heart Particles */
@@ -658,18 +849,9 @@
     }
 
     @keyframes heartFloatUp {
-      0% {
-        opacity: 1;
-        transform: translate(0, 0) scale(0.6);
-      }
-      50% {
-        opacity: 0.9;
-        transform: translate(var(--drift-x, 8px), -24px) scale(1.2);
-      }
-      100% {
-        opacity: 0;
-        transform: translate(var(--drift-x, 14px), -44px) scale(0.8);
-      }
+      0% { opacity: 1; transform: translate(0, 0) scale(0.6); }
+      50% { opacity: 0.9; transform: translate(var(--drift-x, 8px), -24px) scale(1.2); }
+      100% { opacity: 0; transform: translate(var(--drift-x, 14px), -44px) scale(0.8); }
     }
 
     /* Budget Progress Bars */
@@ -758,7 +940,7 @@
       border: 1.5px solid var(--border-color);
       border-radius: 16px;
       padding: 18px 20px;
-      box-shadow: 0 4px 15px rgba(244, 114, 182, 0.08);
+      box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
       gap: 14px;
@@ -768,7 +950,7 @@
 
     .goal-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(244, 114, 182, 0.16);
+      box-shadow: var(--shadow-md);
     }
 
     .goal-card-header {
@@ -788,8 +970,8 @@
       width: 44px;
       height: 44px;
       border-radius: 12px;
-      background: linear-gradient(135deg, rgba(244, 114, 182, 0.15), rgba(251, 113, 133, 0.15));
-      border: 1px solid rgba(244, 114, 182, 0.3);
+      background: var(--primary-light);
+      border: 1px solid var(--border-color);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -819,8 +1001,8 @@
     }
 
     .goal-deadline-badge.achieved {
-      color: #059669;
-      background: #ecfdf5;
+      color: var(--income);
+      background: var(--income-light);
       padding: 2px 8px;
       border-radius: 8px;
     }
@@ -849,16 +1031,16 @@
     .goal-bar-bg {
       width: 100%;
       height: 10px;
-      background: rgba(244, 114, 182, 0.15);
+      background: var(--bg-input);
       border-radius: 6px;
       overflow: hidden;
-      border: 1px solid rgba(244, 114, 182, 0.2);
+      border: 1px solid var(--border-color);
     }
 
     .goal-bar-fill {
       height: 100%;
       border-radius: 6px;
-      background: linear-gradient(90deg, #f472b6, #ec4899);
+      background: var(--primary);
       transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
@@ -881,7 +1063,7 @@
       padding: 7px 12px;
       font-size: 0.8rem;
       font-weight: 600;
-      background: linear-gradient(135deg, #f472b6, #ec4899);
+      background: var(--primary);
       color: #ffffff;
       border: none;
       border-radius: 8px;
@@ -891,6 +1073,11 @@
       justify-content: center;
       gap: 6px;
       transition: opacity 0.2s ease, transform 0.15s ease;
+    }
+
+    [data-theme="monochrome"] .btn-deposit-goal {
+      background: #ffffff;
+      color: #121212;
     }
 
     .btn-deposit-goal:hover {
@@ -916,21 +1103,18 @@
 
     /* Cat Mood Specific Styles & Animations */
     .chart-cat-badge.mood-happy {
-      background: linear-gradient(135deg, #fdf2f8, #fce7f3);
-      border-color: #f472b6;
-      color: #be185d;
+      border-color: var(--income);
+      color: var(--income);
     }
 
     .chart-cat-badge.mood-warning {
-      background: linear-gradient(135deg, #fffbeb, #fef3c7);
-      border-color: #f59e0b;
-      color: #b45309;
+      border-color: var(--warning);
+      color: var(--warning);
     }
 
     .chart-cat-badge.mood-panic {
-      background: linear-gradient(135deg, #fff1f2, #ffe4e6);
-      border-color: #f43f5e;
-      color: #e11d48;
+      border-color: var(--expense);
+      color: var(--expense);
       animation: catBadgePulse 1.2s infinite alternate;
     }
 
@@ -1396,10 +1580,10 @@
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #f472b6, #ec4899);
+      background: var(--primary);
       color: #ffffff;
       border: none;
-      box-shadow: 0 8px 24px rgba(244, 114, 182, 0.45);
+      box-shadow: var(--shadow-lg);
       cursor: pointer;
       z-index: 900;
       align-items: center;
@@ -1616,6 +1800,27 @@
       </div>
 
       <div class="header-actions">
+        <!-- Palette & Theme Selector -->
+        <div class="header-control-group" title="Pilih Tema Warna">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M4.93 19.07l4.24-4.24"/>
+          </svg>
+          <select class="theme-select" id="themeSelect" onchange="changeTheme(this.value)">
+            <option value="pastel">🌸 Pastel Pink</option>
+            <option value="monochrome">🖤 Hitam Putih (Dark)</option>
+            <option value="minimal-light">🤍 Hitam Putih (Light)</option>
+            <option value="emerald">🌿 Mint & Emerald</option>
+            <option value="ocean">🌊 Ocean Blue</option>
+            <option value="dark">🍷 Dark Velvet</option>
+          </select>
+        </div>
+
+        <!-- Mascot Neko Toggle Switch -->
+        <button class="mascot-toggle-btn active" id="mascotToggleBtn" onclick="toggleMascot()" title="Aktifkan / Nonaktifkan Animasi Kucing Neko">
+          <span class="mascot-indicator" id="mascotIndicator"></span>
+          <span>🐾 Maskot: <strong id="mascotStatusText">Aktif</strong></span>
+        </button>
+
         <button class="btn btn-secondary" onclick="openBudgetModal()" title="Atur batas anggaran pengeluaran bulanan">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v2m0 8v2"/>
@@ -1628,12 +1833,6 @@
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
           Ekspor / Backup
-        </button>
-
-        <button class="btn btn-secondary btn-icon-only" onclick="toggleTheme()" id="themeToggleBtn" title="Ganti Mode Gelap / Terang">
-          <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-          </svg>
         </button>
 
         <button class="btn btn-scan" onclick="openScanModal()" title="Foto atau upload struk belanja untuk pencatatan otomatis">
@@ -1791,8 +1990,8 @@
                   <rect x="3" y="9" width="3" height="2" fill="#fbcfe8" />
                   <rect x="18" y="9" width="3" height="2" fill="#fbcfe8" />
 
-                  <!-- Fitur Ekspresi Mata Sesuai Kesehatan Finansial -->
-                  <!-- 1. Normal (Mata Berkedip Biasa) -->
+                  <!-- Fitur Ekspresi Mata Sesuai Finansial -->
+                  <!-- 1. Normal -->
                   <g class="cat-eyes" id="catEyesNormal">
                     <rect x="6" y="7" width="3" height="3" fill="#4a1d35" />
                     <rect x="6" y="7" width="1" height="1" fill="#ffffff" />
@@ -1800,7 +1999,7 @@
                     <rect x="15" y="7" width="1" height="1" fill="#ffffff" />
                   </g>
 
-                  <!-- 2. Happy / Surplus (Mata Senyum ^ ^ & Bintang Berkilau ✨) -->
+                  <!-- 2. Happy / Surplus -->
                   <g id="catEyesHappy" style="display: none;">
                     <rect x="6" y="8" width="1" height="1" fill="#4a1d35" />
                     <rect x="7" y="7" width="1" height="1" fill="#4a1d35" />
@@ -1808,7 +2007,6 @@
                     <rect x="15" y="8" width="1" height="1" fill="#4a1d35" />
                     <rect x="16" y="7" width="1" height="1" fill="#4a1d35" />
                     <rect x="17" y="8" width="1" height="1" fill="#4a1d35" />
-                    <!-- Bintang Berkilau Pixel ✨ -->
                     <g class="cat-sparkle-anim">
                       <rect x="1" y="2" width="1" height="3" fill="#f59e0b" />
                       <rect x="0" y="3" width="3" height="1" fill="#f59e0b" />
@@ -1817,7 +2015,7 @@
                     </g>
                   </g>
 
-                  <!-- 3. Warning / Waspada (Mata Melebar Cemas + Keringat Pixel) -->
+                  <!-- 3. Warning / Waspada -->
                   <g id="catEyesWarning" style="display: none;">
                     <rect x="5" y="7" width="4" height="3" fill="#4a1d35" />
                     <rect x="6" y="7" width="2" height="2" fill="#ffffff" />
@@ -1825,12 +2023,11 @@
                     <rect x="15" y="7" width="4" height="3" fill="#4a1d35" />
                     <rect x="16" y="7" width="2" height="2" fill="#ffffff" />
                     <rect x="16" y="7" width="1" height="1" fill="#4a1d35" />
-                    <!-- Keringat Dingin Pixel -->
                     <rect x="20" y="4" width="2" height="2" fill="#60a5fa" />
                     <rect x="21" y="6" width="1" height="2" fill="#38bdf8" />
                   </g>
 
-                  <!-- 4. Panic / Defisit (Mata Menangis > < + Air Mata Menetes 💦) -->
+                  <!-- 4. Panic / Defisit -->
                   <g id="catEyesPanic" style="display: none;">
                     <rect x="5" y="7" width="1" height="1" fill="#4a1d35" />
                     <rect x="6" y="8" width="2" height="1" fill="#4a1d35" />
@@ -1838,7 +2035,6 @@
                     <rect x="18" y="7" width="1" height="1" fill="#4a1d35" />
                     <rect x="16" y="8" width="2" height="1" fill="#4a1d35" />
                     <rect x="18" y="9" width="1" height="1" fill="#4a1d35" />
-                    <!-- Air Mata Pixel Biru 💦 -->
                     <g class="cat-tear-anim">
                       <rect x="6" y="10" width="2" height="3" fill="#38bdf8" />
                       <rect x="7" y="13" width="1" height="2" fill="#0284c7" />
@@ -1849,18 +2045,16 @@
 
                   <!-- Hidung & Mulut Sesuai Mood -->
                   <rect x="11" y="9" width="2" height="1" fill="#fb7185" />
-                  <!-- Mulut Normal :3 -->
                   <g id="catMouthNormal">
                     <rect x="10" y="10" width="1" height="1" fill="#4a1d35" />
                     <rect x="13" y="10" width="1" height="1" fill="#4a1d35" />
                     <rect x="11" y="11" width="2" height="1" fill="#4a1d35" />
                   </g>
-                  <!-- Mulut Panik Menangis :o -->
                   <g id="catMouthPanic" style="display: none;">
                     <rect x="10" y="11" width="4" height="1" fill="#4a1d35" />
                     <rect x="11" y="10" width="2" height="2" fill="#e11d48" />
                   </g>
-                  <!-- Kaki Depan Pixel Memegang Garis Grafik -->
+                  <!-- Kaki Depan Pixel -->
                   <rect x="4" y="13" width="4" height="3" fill="#ffffff" />
                   <rect x="4" y="13" width="1" height="3" fill="#4a1d35" />
                   <rect x="7" y="13" width="1" height="3" fill="#4a1d35" />
@@ -2079,7 +2273,7 @@
             </div>
           </div>
 
-          <!-- Catatan Tambahan (Opsional) -->
+          <!-- Catatan Tambahan -->
           <div class="form-group">
             <label for="txNotes">Catatan Tambahan (Opsional)</label>
             <input type="text" id="txNotes" class="form-control" placeholder="Lokasi, nama rekan, atau nomor invoice...">
@@ -2105,7 +2299,7 @@
       </div>
       <form id="budgetForm" onsubmit="saveBudgets(event)">
         <div class="modal-body" id="budgetFormFields">
-          <!-- Populated by JS for each expense category -->
+          <!-- Populated by JS -->
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" onclick="closeBudgetModal()">Tutup</button>
@@ -2151,14 +2345,12 @@
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-            <!-- Target Nominal -->
             <div class="form-group">
               <label for="goalTargetInput">Target Nominal (Rp)</label>
               <input type="number" id="goalTargetInput" class="form-control" placeholder="Contoh: 10000000" min="1000" required oninput="updateGoalTargetPreview(this.value)">
               <div id="goalTargetPreview" style="font-size: 0.8rem; color: var(--primary); font-weight: 700; margin-top: 4px;">Rp 0</div>
             </div>
 
-            <!-- Tabungan Saat Ini -->
             <div class="form-group">
               <label for="goalCurrentInput">Sudah Terkumpul (Rp)</label>
               <input type="number" id="goalCurrentInput" class="form-control" placeholder="Contoh: 2000000" min="0" value="0">
@@ -2166,13 +2358,11 @@
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-            <!-- Tanggal Batas Waktu -->
             <div class="form-group">
               <label for="goalDeadlineInput">Target Tanggal Selesai</label>
               <input type="date" id="goalDeadlineInput" class="form-control" required>
             </div>
 
-            <!-- Catatan / Motivasi -->
             <div class="form-group">
               <label for="goalNotesInput">Catatan Motivasi</label>
               <input type="text" id="goalNotesInput" class="form-control" placeholder="Contoh: Biar kerja makin sat-set!">
@@ -2181,7 +2371,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" onclick="closeGoalModal()">Batal</button>
-          <button type="submit" class="btn btn-primary" id="btnSaveGoal">Simpan Impian 🌸</button>
+          <button type="submit" class="btn btn-primary" id="btnSaveGoal">Simpan Impian ✨</button>
         </div>
       </form>
     </div>
@@ -2199,7 +2389,7 @@
       <form id="depositForm" onsubmit="submitDepositGoal(event)">
         <div class="modal-body">
           <input type="hidden" id="depositGoalId">
-          <div style="padding: 12px 14px; background: rgba(244, 114, 182, 0.1); border-radius: 12px; margin-bottom: 16px; border: 1px solid rgba(244, 114, 182, 0.25);">
+          <div style="padding: 12px 14px; background: var(--primary-light); border-radius: 12px; margin-bottom: 16px; border: 1px solid var(--border-color);">
             <div style="font-size: 0.85rem; color: var(--text-muted);">Target Impian:</div>
             <div style="font-size: 1.05rem; font-weight: 700; color: var(--text-main);" id="depositGoalTitle">Beli Laptop M3</div>
             <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;" id="depositGoalProgressInfo">Terkumpul: Rp 0 / Rp 0</div>
@@ -2230,7 +2420,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" onclick="closeDepositModal()">Batal</button>
-          <button type="submit" class="btn btn-primary">Masukkan ke Celengan 🌸</button>
+          <button type="submit" class="btn btn-primary">Masukkan ke Celengan ✨</button>
         </div>
       </form>
     </div>
@@ -2306,7 +2496,6 @@
         <div class="scan-grid">
           <!-- Kolom Kiri: Input Gambar & Kamera -->
           <div>
-            <!-- Dropzone / Upload Box -->
             <div class="dropzone" id="receiptDropzone" onclick="document.getElementById('receiptFileInput').click()" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleReceiptDrop(event)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
@@ -2315,7 +2504,6 @@
               <div style="font-size: 0.75rem; color: var(--text-muted);">Mendukung JPG, PNG, WEBP, atau Paste (Cmd+V)</div>
             </div>
 
-            <!-- Hidden File Input & Camera Input -->
             <input type="file" id="receiptFileInput" accept="image/*" style="display: none;" onchange="handleReceiptFileSelect(event)">
             <input type="file" id="receiptCameraInput" accept="image/*" capture="environment" style="display: none;" onchange="handleReceiptFileSelect(event)">
 
@@ -2330,7 +2518,6 @@
               </button>
             </div>
 
-            <!-- Webcam Live Streaming Video (if desktop camera used) -->
             <div id="cameraStreamContainer" style="display: none; margin-top: 10px;">
               <video id="cameraStreamVideo" class="camera-video-stream" autoplay playsinline></video>
               <div style="display: flex; gap: 8px; margin-top: 8px;">
@@ -2343,13 +2530,11 @@
               </div>
             </div>
 
-            <!-- Preview Image Box & Progress -->
             <div id="scanPreviewSection" style="display: none; margin-top: 14px;">
               <div class="scan-preview-box">
                 <img id="scanPreviewImg" class="scan-preview-img" alt="Preview Struk">
               </div>
 
-              <!-- Progress bar -->
               <div class="scan-progress-bar">
                 <div class="scan-progress-fill" id="scanProgressFill"></div>
               </div>
@@ -2359,7 +2544,6 @@
               </div>
             </div>
 
-            <!-- Coba Contoh Struk -->
             <div style="margin-top: 14px;">
               <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Coba Contoh Struk untuk Tes:</div>
               <div class="sample-receipt-chips">
@@ -2374,20 +2558,17 @@
           <div>
             <form id="scannedTxForm" onsubmit="saveScannedTransaction(event)">
               <div style="display: flex; flex-direction: column; gap: 14px;">
-                <!-- Nominal yang terdeteksi -->
                 <div class="form-group">
                   <label for="scanNominal" style="color: var(--primary);">Nominal Terdeteksi (Rupiah)*</label>
                   <input type="number" id="scanNominal" class="form-control" style="font-size: 1.15rem; font-weight: 800; color: var(--expense);" required min="1" step="any" oninput="updateScanNominalPreview(this.value)">
                   <div id="scanNominalFormatted" style="font-size: 0.8rem; color: var(--expense); font-weight: 700; margin-top: 3px;">Rp 0</div>
                 </div>
 
-                <!-- Toko / Keperluan -->
                 <div class="form-group">
                   <label for="scanMerchant">Toko / Keterangan Keperluan*</label>
                   <input type="text" id="scanMerchant" class="form-control" required placeholder="Nama Toko atau Keperluan">
                 </div>
 
-                <!-- Kategori & Metode Pembayaran -->
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                   <div class="form-group">
                     <label for="scanCategory">Kategori Otomatis</label>
@@ -2414,19 +2595,16 @@
                   </div>
                 </div>
 
-                <!-- Tanggal Transaksi -->
                 <div class="form-group">
                   <label for="scanDate">Tanggal Transaksi</label>
                   <input type="date" id="scanDate" class="form-control" required>
                 </div>
 
-                <!-- Catatan Tambahan -->
                 <div class="form-group">
                   <label for="scanNotes">Catatan / Rincian Struk</label>
                   <input type="text" id="scanNotes" class="form-control" placeholder="Rincian barang atau nomor struk">
                 </div>
 
-                <!-- Accordion Teks Mentah OCR -->
                 <details class="raw-text-accordion">
                   <summary>Lihat Teks Mentah Hasil Pemindaian (OCR Raw)</summary>
                   <pre class="raw-text-pre" id="scanRawTextDisplay">(Belum ada teks yang dipindai)</pre>
@@ -2491,18 +2669,20 @@
     let transactions = [];
     let budgets = {};
     let savingsGoals = [];
-    let currentFilterPeriod = 'all'; // all, month, 7days, today, year
+    let currentFilterPeriod = 'all';
     let currentFormType = 'expense';
     let cashflowChartInstance = null;
     let categoryChartInstance = null;
-    let currentCatMood = 'normal'; // happy, normal, warning, panic
-    let catMoodOverride = null; // for testing or manual preview
+    let currentCatMood = 'normal';
+    let catMoodOverride = null;
+    let isMascotEnabled = true;
 
     // --- Storage Keys ---
     const STORAGE_KEY_TX = 'pencatatan_keuangan_tx_v1';
     const STORAGE_KEY_BUDGETS = 'pencatatan_keuangan_budgets_v1';
-    const STORAGE_KEY_THEME = 'pencatatan_keuangan_theme_v1';
+    const STORAGE_KEY_THEME = 'pencatatan_keuangan_theme_v2';
     const STORAGE_KEY_GOALS = 'pencatatan_keuangan_goals_v1';
+    const STORAGE_KEY_MASCOT = 'pencatatan_keuangan_mascot_active_v1';
 
     const DEFAULT_GOALS = [
       {
@@ -2530,6 +2710,7 @@
     // --- Initialization ---
     document.addEventListener('DOMContentLoaded', () => {
       initTheme();
+      initMascotSetting();
       loadStorageData();
       populateCategoryDropdown();
       populateFilterCategoryDropdown();
@@ -2578,36 +2759,77 @@
       return active && (active.tagName === 'INPUT' || active.tagName === 'SELECT' || active.tagName === 'TEXTAREA');
     }
 
-    // --- Theme Controller ---
+    // --- Theme Controller (Multi-Theme Palette) ---
     function initTheme() {
-      // Default theme is Pastel Pink & Putih ('pastel')
-      let savedTheme = localStorage.getItem(STORAGE_KEY_THEME);
-      if (!savedTheme || savedTheme === 'dark') {
-        savedTheme = 'pastel';
-        localStorage.setItem(STORAGE_KEY_THEME, 'pastel');
-      }
-      document.documentElement.setAttribute('data-theme', savedTheme);
-      updateThemeIcon(savedTheme);
+      const savedTheme = localStorage.getItem(STORAGE_KEY_THEME) || 'pastel';
+      applyTheme(savedTheme);
+      const themeSelect = document.getElementById('themeSelect');
+      if (themeSelect) themeSelect.value = savedTheme;
     }
 
-    function toggleTheme() {
-      const current = document.documentElement.getAttribute('data-theme') || 'pastel';
-      const next = (current === 'pastel' || current === 'light') ? 'dark' : 'pastel';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem(STORAGE_KEY_THEME, next);
-      updateThemeIcon(next);
+    function changeTheme(themeName) {
+      applyTheme(themeName);
+      localStorage.setItem(STORAGE_KEY_THEME, themeName);
+      showToast(`Tema diubah ke: ${getThemeDisplayName(themeName)}`, 'info');
+    }
+
+    function applyTheme(themeName) {
+      document.documentElement.setAttribute('data-theme', themeName);
       if (cashflowChartInstance) updateChartsTheme();
     }
 
-    function updateThemeIcon(theme) {
-      const icon = document.getElementById('themeIcon');
-      if (!icon) return;
-      if (theme === 'dark') {
-        // Sun icon (click to switch back to pastel pink)
-        icon.innerHTML = `<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>`;
-      } else {
-        // Moon icon (click to switch to dark velvet rose)
-        icon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>`;
+    function getThemeDisplayName(theme) {
+      const names = {
+        'pastel': 'Pastel Pink 🌸',
+        'monochrome': 'Hitam Putih (Dark) 🖤',
+        'minimal-light': 'Hitam Putih (Light) 🤍',
+        'emerald': 'Mint & Emerald 🌿',
+        'ocean': 'Ocean Blue 🌊',
+        'dark': 'Dark Velvet 🍷'
+      };
+      return names[theme] || theme;
+    }
+
+    // --- Cat Mascot Visibility Controller ---
+    function initMascotSetting() {
+      const stored = localStorage.getItem(STORAGE_KEY_MASCOT);
+      isMascotEnabled = stored !== null ? (stored === 'true') : true;
+      applyMascotState();
+    }
+
+    function toggleMascot() {
+      isMascotEnabled = !isMascotEnabled;
+      localStorage.setItem(STORAGE_KEY_MASCOT, isMascotEnabled);
+      applyMascotState();
+      showToast(isMascotEnabled ? 'Animasi kucing Neko diaktifkan! 🐾' : 'Animasi kucing Neko dinonaktifkan', 'info');
+    }
+
+    function applyMascotState() {
+      const stage = document.getElementById('chartCatStage');
+      const badge = document.getElementById('chartCatBadge');
+      const toggleBtn = document.getElementById('mascotToggleBtn');
+      const statusText = document.getElementById('mascotStatusText');
+
+      if (stage) {
+        if (isMascotEnabled) {
+          stage.classList.remove('hidden-mascot');
+        } else {
+          stage.classList.add('hidden-mascot');
+        }
+      }
+
+      if (badge) {
+        badge.style.display = isMascotEnabled ? 'inline-flex' : 'none';
+      }
+
+      if (toggleBtn && statusText) {
+        if (isMascotEnabled) {
+          toggleBtn.classList.add('active');
+          statusText.textContent = 'Aktif';
+        } else {
+          toggleBtn.classList.remove('active');
+          statusText.textContent = 'Nonaktif';
+        }
       }
     }
 
@@ -2647,7 +2869,6 @@
     let catMsgIndex = 0;
 
     function initPixelCatMascot() {
-      // Rotate messages every 7 seconds if not hovered
       setInterval(() => {
         const walker = document.getElementById('pixelCatWalker');
         const bubble = document.getElementById('catBubbleText');
@@ -2691,20 +2912,16 @@
       const totalBalance = totalIncome - totalExpense;
       const monthBalance = monthIncome - monthExpense;
 
-      // Budget evaluation
       const totalBudget = Object.values(budgets).reduce((a, b) => a + (Number(b) || 0), 0);
       const budgetRatio = totalBudget > 0 ? (monthExpense / totalBudget) : (monthIncome > 0 ? (monthExpense / monthIncome) : 0);
 
       let targetMood = 'normal';
 
       if (totalBalance < 0 || (totalBudget > 0 && monthExpense > totalBudget) || (monthIncome > 0 && monthBalance < 0 && monthExpense > 1000000)) {
-        // Condition: Minus or Overbudget (>100%) -> Panik / Menangis
         targetMood = 'panic';
       } else if ((totalBudget > 0 && budgetRatio >= 0.70) || (monthIncome > 0 && budgetRatio >= 0.80)) {
-        // Condition: Warning (>70% - 99% of budget) -> Waspada
         targetMood = 'warning';
       } else if (totalBalance >= 0 && (monthBalance > 0 || totalBudget === 0 || budgetRatio < 0.65)) {
-        // Condition: Surplus / Hemat -> Senang & Berbintang
         targetMood = 'happy';
       }
 
@@ -2752,7 +2969,6 @@
         }
       }
 
-      // Update text bubble immediately
       const bubble = document.getElementById('catBubbleText');
       if (bubble) {
         const msgs = CAT_MOOD_MESSAGES[currentCatMood] || CAT_MOOD_MESSAGES.normal;
@@ -2768,7 +2984,6 @@
         normal: '🐾 Normal'
       };
 
-      // Cycle mood for interactive test preview: Happy -> Warning -> Panic -> Otomatis
       const cycle = ['happy', 'warning', 'panic', null];
       const curIdx = cycle.indexOf(catMoodOverride);
       const nextIdx = (curIdx + 1) % cycle.length;
@@ -2776,10 +2991,10 @@
 
       if (catMoodOverride) {
         setCatMood(catMoodOverride);
-        showToast(`Tes Ekspresi Neko: ${moodNames[catMoodOverride]}! (Klik lagi untuk ekspresi lain)`, 'info');
+        showToast(`Tes Ekspresi Neko: ${moodNames[catMoodOverride]}!`, 'info');
       } else {
         updateCatFinancialMood();
-        showToast(`Ekspresi Neko kembali otomatis sesuai keuangan: ${moodNames[currentCatMood]}!`, 'success');
+        showToast(`Ekspresi Neko otomatis: ${moodNames[currentCatMood]}!`, 'success');
       }
       triggerCatMeow();
     }
@@ -2792,19 +3007,17 @@
 
       if (avatar) {
         avatar.classList.remove('jump');
-        void avatar.offsetWidth; // Force CSS animation reflow
+        void avatar.offsetWidth;
         avatar.classList.add('jump');
         setTimeout(() => avatar.classList.remove('jump'), 600);
       }
 
-      // Cycle message for current mood
       const msgs = CAT_MOOD_MESSAGES[currentCatMood] || CAT_MOOD_MESSAGES.normal;
       catMsgIndex = (catMsgIndex + 1) % msgs.length;
       if (bubble) {
         bubble.textContent = msgs[catMsgIndex];
       }
 
-      // Spawn floating mood particles
       const stage = document.getElementById('chartCatStage');
       if (stage && walker) {
         let icons = ['💖', '🐾', '✨', '🌸', '💕', '⭐'];
@@ -2834,19 +3047,17 @@
 
     // --- Data Persistence ---
     function loadStorageData() {
-      const storedTx = localStorage.getItem(STORAGE_KEY_TX) || localStorage.getItem('annin_transactions_v1') || localStorage.getItem('fintrack_transactions_v1');
-      const storedBudgets = localStorage.getItem(STORAGE_KEY_BUDGETS) || localStorage.getItem('annin_budgets_v1') || localStorage.getItem('fintrack_budgets_v1');
+      const storedTx = localStorage.getItem(STORAGE_KEY_TX) || localStorage.getItem('annin_transactions_v1');
+      const storedBudgets = localStorage.getItem(STORAGE_KEY_BUDGETS) || localStorage.getItem('annin_budgets_v1');
       const storedGoals = localStorage.getItem(STORAGE_KEY_GOALS);
 
       if (storedTx) {
         try {
           transactions = JSON.parse(storedTx);
         } catch (e) {
-          console.error("Error parsing stored tx", e);
           transactions = [];
         }
       } else {
-        // Seed with realistic initial data
         loadDemoData(false);
         return;
       }
@@ -2956,7 +3167,7 @@
           category: 'Transportasi & Bensin',
           wallet: 'Tunai',
           date: `${yr}-${mo}-07`,
-          notes: 'Bengkel Resmi Ahass'
+          notes: 'Bengkel Resmi'
         },
         {
           id: 'demo-8',
@@ -3081,7 +3292,6 @@
       renderApp();
     }
 
-    // Filter transactions by period, search & selectors
     function getFilteredTransactions() {
       const now = new Date();
       const currentYear = now.getFullYear();
@@ -3093,7 +3303,6 @@
       const catVal = document.getElementById('categoryFilter').value;
 
       return transactions.filter(item => {
-        // 1. Period filter
         const itemDate = new Date(item.date);
         if (currentFilterPeriod === 'today') {
           if (item.date !== todayStr) return false;
@@ -3106,13 +3315,9 @@
           if (itemDate.getFullYear() !== currentYear) return false;
         }
 
-        // 2. Type filter
         if (typeVal !== 'all' && item.type !== typeVal) return false;
-
-        // 3. Category filter
         if (catVal !== 'all' && item.category !== catVal) return false;
 
-        // 4. Search filter
         if (searchVal) {
           const matchTitle = (item.title || '').toLowerCase().includes(searchVal);
           const matchCategory = (item.category || '').toLowerCase().includes(searchVal);
@@ -3128,8 +3333,6 @@
     // --- Main Rendering Engine ---
     function renderApp() {
       const filtered = getFilteredTransactions();
-
-      // Sort descending by date
       filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
 
       renderStats(filtered);
@@ -3140,7 +3343,6 @@
       updateCatFinancialMood();
     }
 
-    // Render Stats
     function renderStats(list) {
       let income = 0;
       let expense = 0;
@@ -3167,7 +3369,6 @@
       document.getElementById('incomeCountVal').textContent = `${incCount} transaksi masuk`;
       document.getElementById('expenseCountVal').textContent = `${expCount} transaksi keluar`;
 
-      // Savings rate calculation
       const savingsRateBadge = document.getElementById('savingsRateBadge');
       if (income > 0) {
         const rate = Math.round((balance / income) * 100);
@@ -3178,7 +3379,6 @@
         savingsRateBadge.className = 'badge-trend positive';
       }
 
-      // Daily Average
       let divisor = 30;
       if (currentFilterPeriod === 'today') divisor = 1;
       else if (currentFilterPeriod === '7days') divisor = 7;
@@ -3188,7 +3388,6 @@
       document.getElementById('dailyAvgVal').textContent = formatRupiah(dailyAvg);
     }
 
-    // Render Table
     function renderTable(list) {
       const tbody = document.getElementById('txTableBody');
       const counterLabel = document.getElementById('txCounterLabel');
@@ -3254,15 +3453,15 @@
       }).join('');
     }
 
-    // Render Charts
     function renderCharts(list) {
       if (typeof Chart === 'undefined') return;
 
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const textColor = isDark ? '#f472b6' : '#9d6b84';
-      const gridColor = isDark ? 'rgba(244, 114, 182, 0.12)' : 'rgba(244, 114, 182, 0.15)';
+      const style = getComputedStyle(document.documentElement);
+      const textColor = style.getPropertyValue('--text-muted').trim() || '#9d6b84';
+      const gridColor = style.getPropertyValue('--border-color').trim() || 'rgba(0,0,0,0.06)';
+      const incomeColor = style.getPropertyValue('--income').trim() || '#059669';
+      const expenseColor = style.getPropertyValue('--expense').trim() || '#fb7185';
 
-      // 1. Process Cashflow Data (Group by date)
       const dateMap = {};
       list.forEach(tx => {
         if (!dateMap[tx.date]) dateMap[tx.date] = { income: 0, expense: 0 };
@@ -3270,7 +3469,7 @@
         else dateMap[tx.date].expense += Number(tx.amount);
       });
 
-      const sortedDates = Object.keys(dateMap).sort().slice(-10); // Take last 10 active dates
+      const sortedDates = Object.keys(dateMap).sort().slice(-10);
       const labels = sortedDates.map(d => formatDateIndo(d));
       const incomeData = sortedDates.map(d => dateMap[d].income);
       const expenseData = sortedDates.map(d => dateMap[d].expense);
@@ -3286,14 +3485,14 @@
             {
               label: 'Pemasukan',
               data: incomeData.length ? incomeData : [0],
-              backgroundColor: '#059669',
+              backgroundColor: incomeColor,
               borderRadius: 6,
               barPercentage: 0.65
             },
             {
               label: 'Pengeluaran',
               data: expenseData.length ? expenseData : [0],
-              backgroundColor: '#fb7185',
+              backgroundColor: expenseColor,
               borderRadius: 6,
               barPercentage: 0.65
             }
@@ -3329,7 +3528,6 @@
         }
       });
 
-      // 2. Process Category Breakdown for Expenses
       const catMap = {};
       let totalExpense = 0;
       list.filter(tx => tx.type === 'expense').forEach(tx => {
@@ -3375,7 +3573,6 @@
         }
       });
 
-      // Render category detail list below doughnut
       const catDetailEl = document.getElementById('categoryListDetails');
       if (catLabels.length === 0) {
         catDetailEl.innerHTML = `<div style="text-align: center; color: var(--text-muted); font-size: 0.775rem; padding: 12px;">Belum ada pengeluaran pada periode ini.</div>`;
@@ -3399,10 +3596,14 @@
 
     function updateChartsTheme() {
       if (cashflowChartInstance) {
-        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        const textColor = isDark ? '#f472b6' : '#9d6b84';
-        const gridColor = isDark ? 'rgba(244, 114, 182, 0.12)' : 'rgba(244, 114, 182, 0.15)';
+        const style = getComputedStyle(document.documentElement);
+        const textColor = style.getPropertyValue('--text-muted').trim() || '#9d6b84';
+        const gridColor = style.getPropertyValue('--border-color').trim() || 'rgba(0,0,0,0.06)';
+        const incomeColor = style.getPropertyValue('--income').trim() || '#059669';
+        const expenseColor = style.getPropertyValue('--expense').trim() || '#fb7185';
 
+        cashflowChartInstance.data.datasets[0].backgroundColor = incomeColor;
+        cashflowChartInstance.data.datasets[1].backgroundColor = expenseColor;
         cashflowChartInstance.options.scales.x.ticks.color = textColor;
         cashflowChartInstance.options.scales.x.grid.color = gridColor;
         cashflowChartInstance.options.scales.y.ticks.color = textColor;
@@ -3419,7 +3620,6 @@
       const currentYear = now.getFullYear();
       const currentMonth = now.getMonth();
 
-      // Calculate this month's expense per category
       const currentMonthExpenses = {};
       transactions.forEach(tx => {
         if (tx.type === 'expense') {
@@ -3475,7 +3675,7 @@
       if (!savingsGoals || savingsGoals.length === 0) {
         container.innerHTML = `
           <div style="grid-column: 1 / -1; text-align: center; padding: 36px 20px; background: var(--bg-card); border-radius: 16px; border: 1.5px dashed var(--border-color);">
-            <div style="font-size: 2.2rem; margin-bottom: 8px;">🎯🐾</div>
+            <div style="font-size: 2.2rem; margin-bottom: 8px;">🎯✨</div>
             <div style="font-weight: 700; color: var(--text-main); font-size: 1rem;">Belum Ada Celengan Impian</div>
             <div style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px; max-width: 420px; margin-left: auto; margin-right: auto;">
               Mulai wujudkan barang impian, dana darurat, atau rencana liburanmu dengan membuat target tabungan pertamamu!
@@ -3492,7 +3692,6 @@
         const percent = target > 0 ? Math.min(100, Math.round((current / target) * 100)) : 0;
         const isAchieved = current >= target;
 
-        // Calculate days remaining
         let deadlineLabel = '-';
         if (goal.deadline) {
           const deadlineDate = new Date(goal.deadline);
@@ -3527,7 +3726,7 @@
                   </div>
                 </div>
               </div>
-              <div style="font-size: 1.1rem; font-weight: 800; color: ${isAchieved ? '#059669' : 'var(--primary)'};">
+              <div style="font-size: 1.1rem; font-weight: 800; color: ${isAchieved ? 'var(--income)' : 'var(--primary)'};">
                 ${percent}%
               </div>
             </div>
@@ -3538,7 +3737,7 @@
                 <span class="goal-target-val">dari ${formatRupiah(target)}</span>
               </div>
               <div class="goal-bar-bg">
-                <div class="goal-bar-fill" style="width: ${percent}%; ${isAchieved ? 'background: linear-gradient(90deg, #10b981, #059669);' : ''}"></div>
+                <div class="goal-bar-fill" style="width: ${percent}%; ${isAchieved ? 'background: var(--income);' : ''}"></div>
               </div>
               <div class="goal-status-text">
                 <span>${isAchieved ? '✨ Tabungan Penuh!' : `Kurang ${formatRupiah(remaining)} lagi`}</span>
@@ -3548,7 +3747,7 @@
 
             <div class="goal-card-actions">
               <button class="btn-deposit-goal" onclick="openDepositGoalModal('${goal.id}')">
-                <span>+</span> Sisihkan Uang 🌸
+                <span>+</span> Sisihkan Uang ✨
               </button>
               <button class="btn-goal-icon" title="Edit Impian" onclick="openGoalModal('${goal.id}')">
                 ✏️
@@ -3575,7 +3774,6 @@
           document.getElementById('goalIdInput').value = goal.id;
           document.getElementById('goalTitleInput').value = goal.title;
 
-          // Select matching option
           const select = document.getElementById('goalIconSelect');
           for (let opt of select.options) {
             if (opt.value.startsWith(goal.icon) || opt.value.includes(goal.category)) {
@@ -3594,7 +3792,6 @@
         titleEl.textContent = '🎯 Tambah Celengan Impian';
         document.getElementById('goalIdInput').value = '';
 
-        // Default deadline: 6 months ahead
         const d = new Date();
         d.setMonth(d.getMonth() + 6);
         document.getElementById('goalDeadlineInput').value = d.toISOString().split('T')[0];
@@ -3632,7 +3829,6 @@
       }
 
       if (id) {
-        // Edit existing
         const idx = savingsGoals.findIndex(g => g.id === id);
         if (idx !== -1) {
           savingsGoals[idx] = {
@@ -3645,10 +3841,9 @@
             deadline,
             notes
           };
-          showToast('Celengan impian berhasil diperbarui! 🌸', 'success');
+          showToast('Celengan impian berhasil diperbarui! ✨', 'success');
         }
       } else {
-        // New goal
         const newGoal = {
           id: 'goal-' + Date.now(),
           title,
@@ -3729,7 +3924,6 @@
       goal.currentAmount += amount;
       saveSavingsGoals();
 
-      // Optional: record transaction in history as expense under Investasi & Tabungan
       if (syncTx) {
         const tx = {
           id: 'tx-goal-' + Date.now(),
@@ -3755,7 +3949,7 @@
         setCatMood('happy');
         triggerCatMeow();
       } else {
-        showToast(`Berhasil menyisihkan ${formatRupiah(amount)} ke "${goal.title}"! 🌸💰`, 'success');
+        showToast(`Berhasil menyisihkan ${formatRupiah(amount)} ke "${goal.title}"! 💰`, 'success');
         triggerCatMeow();
       }
     }
@@ -3840,7 +4034,6 @@
       }
 
       if (id) {
-        // Edit existing
         const index = transactions.findIndex(t => t.id === id);
         if (index !== -1) {
           transactions[index] = {
@@ -3856,7 +4049,6 @@
           showToast('Transaksi berhasil diperbarui!', 'success');
         }
       } else {
-        // Add new
         const newTx = {
           id: 'tx-' + Date.now() + '-' + Math.random().toString(36).substr(2, 5),
           type: currentFormType,
@@ -3975,7 +4167,7 @@
 
     function exportToJSON() {
       const backupData = {
-        version: '1.0',
+        version: '2.0',
         exportedAt: new Date().toISOString(),
         transactions,
         budgets,
@@ -4060,9 +4252,7 @@
         .replace(/'/g, '&#039;');
     }
 
-    // ============================================================
     // --- RECEIPT SCANNER & OCR CONTROLLER ---
-    // ============================================================
     let activeCameraStream = null;
 
     function populateScanCategoryDropdown() {
@@ -4087,7 +4277,6 @@
       document.getElementById('scanNotes').value = '';
       document.getElementById('scanRawTextDisplay').textContent = '(Belum ada teks yang dipindai)';
       
-      // Reset preview
       document.getElementById('scanPreviewSection').style.display = 'none';
       stopCameraStream();
 
@@ -4104,14 +4293,11 @@
       document.getElementById('scanNominalFormatted').textContent = formatRupiah(num);
     }
 
-    // --- Camera Handling ---
     function triggerCameraCapture() {
-      // If mobile, prioritize native camera file input
       const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
       if (isMobile) {
         document.getElementById('receiptCameraInput').click();
       } else {
-        // Try desktop live stream
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
           startCameraStream();
         } else {
@@ -4131,7 +4317,6 @@
         document.getElementById('cameraStreamContainer').style.display = 'block';
         document.getElementById('receiptDropzone').style.display = 'none';
       } catch (err) {
-        console.warn('Camera access denied or error:', err);
         showToast('Kamera tidak dapat diakses, beralih ke upload file', 'danger');
         document.getElementById('receiptFileInput').click();
       }
@@ -4164,7 +4349,6 @@
       displayAndProcessImage(dataUrl);
     }
 
-    // --- File Drag & Drop Handling ---
     function handleDragOver(e) {
       e.preventDefault();
       e.stopPropagation();
@@ -4207,7 +4391,6 @@
       reader.readAsDataURL(file);
     }
 
-    // Clipboard Paste Listener
     window.addEventListener('paste', (e) => {
       const modal = document.getElementById('scanModalOverlay');
       if (!modal || !modal.classList.contains('active')) return;
@@ -4223,7 +4406,6 @@
       }
     });
 
-    // --- Image Preprocessing & Display ---
     function displayAndProcessImage(rawImageDataUrl) {
       const previewImg = document.getElementById('scanPreviewImg');
       previewImg.src = rawImageDataUrl;
@@ -4231,7 +4413,6 @@
 
       updateScanStatus(15, 'Mempersiapkan dan mengoptimalkan gambar...', true);
 
-      // Preprocess image on offscreen canvas for higher OCR accuracy
       const img = new Image();
       img.onload = () => {
         const processedDataUrl = preprocessReceiptImage(img);
@@ -4246,7 +4427,6 @@
       let w = img.naturalWidth || img.width;
       let h = img.naturalHeight || img.height;
 
-      // Scale down if image is huge to ensure fast OCR (< 2.5s)
       const maxDim = 1600;
       if (w > maxDim || h > maxDim) {
         if (w > h) {
@@ -4265,10 +4445,9 @@
       try {
         const imgData = ctx.getImageData(0, 0, w, h);
         const d = imgData.data;
-        // Grayscale & contrast boost
         for (let i = 0; i < d.length; i += 4) {
           let gray = 0.299 * d[i] + 0.587 * d[i+1] + 0.114 * d[i+2];
-          gray = (gray - 128) * 1.3 + 128; // contrast boost
+          gray = (gray - 128) * 1.3 + 128;
           gray = Math.max(0, Math.min(255, gray));
           d[i] = gray;
           d[i+1] = gray;
@@ -4290,7 +4469,6 @@
       if (spinner) spinner.textContent = showSpinner ? '⏳' : '✅';
     }
 
-    // --- OCR Processing & Parsing ---
     async function processReceiptImage(dataUrl) {
       updateScanStatus(25, 'Memulai pengenalan karakter struk (AI/OCR)...', true);
 
@@ -4318,9 +4496,8 @@
         updateScanStatus(100, 'Pemindaian berhasil! Silakan periksa hasil.', false);
         showToast('Struk berhasil dibaca otomatis!', 'success');
       } catch (err) {
-        console.warn('OCR processing error:', err);
         updateScanStatus(100, 'Gagal membaca otomatis via OCR. Silakan isi form manual.', false);
-        showToast('OCR tidak dapat membaca struk secara otomatis. Silakan isi form manual.', 'danger');
+        showToast('OCR tidak dapat membaca struk secara otomatis. Silakan isi manual.', 'danger');
       }
     }
 
@@ -4337,7 +4514,6 @@
       const lines = rawText.split('\n').map(l => l.trim()).filter(l => l.length > 0);
       const fullText = rawText.toLowerCase();
 
-      // 1. Merchant & Category Detection
       const brandRules = [
         { name: 'Indomaret', cat: 'Belanja & Kebutuhan', regex: /indomaret/i },
         { name: 'Alfamart', cat: 'Belanja & Kebutuhan', regex: /alfamart/i },
@@ -4392,7 +4568,6 @@
       }
       if (!result.merchant) result.merchant = 'Belanja Struk';
 
-      // Category fallback
       if (result.category === 'Belanja & Kebutuhan') {
         if (/kopi|coffee|resto|restoran|cafe|makan|food|kuliner|bakso|ayam|mie|sate|warung/i.test(fullText)) {
           result.category = 'Makanan & Minuman';
@@ -4405,7 +4580,6 @@
         }
       }
 
-      // 2. Amount Extraction
       const cleanNumber = (str) => {
         let clean = str.replace(/[^\d,\.]/g, '');
         if (/^\d{1,3}(\.\d{3})+(,\d+)?$/.test(clean)) {
@@ -4453,7 +4627,6 @@
         }
       }
 
-      // 3. Date Detection
       const dateMatch = rawText.match(/(\d{1,2})[\/\-\.](\d{1,2})[\/\-\.](\d{2,4})/);
       if (dateMatch) {
         let d = parseInt(dateMatch[1]);
@@ -4470,7 +4643,6 @@
         }
       }
 
-      // 4. Payment Method Detection
       if (/qris/i.test(fullText)) result.wallet = 'QRIS';
       else if (/gopay/i.test(fullText)) result.wallet = 'GoPay';
       else if (/shopeepay|shopee/i.test(fullText)) result.wallet = 'ShopeePay';
@@ -4508,7 +4680,6 @@
       document.getElementById('scanNotes').value = `Otomatis dari struk ${parsed.merchant || ''}`;
     }
 
-    // --- Demo Receipt Generator & Tester ---
     function loadDemoReceipt(type) {
       let rawText = '';
       let amount = 0;
@@ -4547,22 +4718,18 @@
           items.join('\n') + `\n-----------------------------\nSUBTOTAL    40.000\nGRAND TOTAL 44.000\nMETODE: GOPAY`;
       }
 
-      // Generate visual receipt canvas
       const canvas = document.createElement('canvas');
       canvas.width = 400;
       canvas.height = 480;
       const ctx = canvas.getContext('2d');
 
-      // Receipt paper background
       ctx.fillStyle = '#f8fafc';
       ctx.fillRect(0, 0, 400, 480);
 
-      // Receipt border shadow
       ctx.strokeStyle = '#cbd5e1';
       ctx.lineWidth = 2;
       ctx.strokeRect(10, 10, 380, 460);
 
-      // Text drawing
       ctx.fillStyle = '#0f172a';
       ctx.font = 'bold 15px monospace';
       ctx.textAlign = 'center';
@@ -4606,7 +4773,6 @@
       }, 300);
     }
 
-    // --- Save Scanned Transaction ---
     function saveScannedTransaction(e) {
       e.preventDefault();
       const amount = parseFloat(document.getElementById('scanNominal').value);
