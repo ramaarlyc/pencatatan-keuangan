@@ -3051,6 +3051,7 @@
       const storedBudgets = localStorage.getItem(STORAGE_KEY_BUDGETS) || localStorage.getItem('annin_budgets_v1');
       const storedGoals = localStorage.getItem(STORAGE_KEY_GOALS);
 
+      // Default state: kosong untuk pengunjung baru
       if (storedTx) {
         try {
           transactions = JSON.parse(storedTx);
@@ -3058,8 +3059,7 @@
           transactions = [];
         }
       } else {
-        loadDemoData(false);
-        return;
+        transactions = [];
       }
 
       if (storedBudgets) {
@@ -3076,11 +3076,10 @@
         try {
           savingsGoals = JSON.parse(storedGoals);
         } catch (e) {
-          savingsGoals = JSON.parse(JSON.stringify(DEFAULT_GOALS));
+          savingsGoals = [];
         }
       } else {
-        savingsGoals = JSON.parse(JSON.stringify(DEFAULT_GOALS));
-        saveSavingsGoals();
+        savingsGoals = [];
       }
     }
 
